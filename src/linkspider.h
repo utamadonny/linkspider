@@ -1,6 +1,7 @@
 #ifndef LINK_SPIDER
 #define LINK_SPIDER
 
+#include "Arduino.h"
 #include <math.h>
 #include <stdio.h>
 

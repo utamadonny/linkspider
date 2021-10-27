@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <SoftwareSerial.h>
 
-#include "../../../linkspider.h"
+#include "linkspider.h"
 
 SoftwareSerial serialSSC(19, 18);  // RX, TX
 
@@ -36,53 +36,49 @@ void setup() {
 
   // Config from calibration example by pressing 'c' in serial monitor
   // BEGIN =============================
-  leg[0].setAnchorRotDeg(135.00);
-  leg[0].setNormalPosPWM(0, 1480.00);
-  leg[0].setRatioDegPWM(0, 0.09);
-  leg[0].setNormalPosPWM(1, 1440.00);
-  leg[0].setRatioDegPWM(1, 0.10);
-  leg[0].setNormalPosPWM(2, 2440.00);
-  leg[0].setRatioDegPWM(2, -0.10);
-
-  leg[1].setAnchorRotDeg(45.00);
-  leg[1].setNormalPosPWM(0, 1650.00);
-  leg[1].setRatioDegPWM(0, 0.09);
-  leg[1].setNormalPosPWM(1, 1540.00);
-  leg[1].setRatioDegPWM(1, -0.12);
-  leg[1].setNormalPosPWM(2, 640.00);
-  leg[1].setRatioDegPWM(2, 0.11);
-
-  leg[2].setAnchorRotDeg(180.00);
-  leg[2].setNormalPosPWM(0, 1450.00);
-  leg[2].setRatioDegPWM(0, 0.09);
-  leg[2].setNormalPosPWM(1, 1590.00);
-  leg[2].setRatioDegPWM(1, 0.10);
-  leg[2].setNormalPosPWM(2, 2430.00);
-  leg[2].setRatioDegPWM(2, -0.10);
-
-  leg[3].setAnchorRotDeg(0.00);
-  leg[3].setNormalPosPWM(0, 1470.00);
-  leg[3].setRatioDegPWM(0, 0.10);
-  leg[3].setNormalPosPWM(1, 1590.00);
-  leg[3].setRatioDegPWM(1, -0.11);
-  leg[3].setNormalPosPWM(2, 440.00);
-  leg[3].setRatioDegPWM(2, 0.12);
-
-  leg[4].setAnchorRotDeg(225.00);
-  leg[4].setNormalPosPWM(0, 1380.00);
-  leg[4].setRatioDegPWM(0, 0.09);
-  leg[4].setNormalPosPWM(1, 1160.00);
-  leg[4].setRatioDegPWM(1, 0.11);
-  leg[4].setNormalPosPWM(2, 2470.00);
-  leg[4].setRatioDegPWM(2, -0.12);
-
-  leg[5].setAnchorRotDeg(315.00);
-  leg[5].setNormalPosPWM(0, 1210.00);
-  leg[5].setRatioDegPWM(0, 0.08);
-  leg[5].setNormalPosPWM(1, 1450.00);
-  leg[5].setRatioDegPWM(1, -0.11);
-  leg[5].setNormalPosPWM(2, 600.00);
-  leg[5].setRatioDegPWM(2, 0.12);
+ 
+leg[0].setAnchorRotDeg(135.00);
+leg[0].setNormalPosPWM(0, 1480.00);
+leg[0].setRatioDegPWM(0, 0.08);
+leg[0].setNormalPosPWM(1, 1590.00);
+leg[0].setRatioDegPWM(1, 0.09);
+leg[0].setNormalPosPWM(2, 2450.00);
+leg[0].setRatioDegPWM(2, -0.09);
+leg[1].setAnchorRotDeg(45.00);
+leg[1].setNormalPosPWM(0, 1570.00);
+leg[1].setRatioDegPWM(0, 0.09);
+leg[1].setNormalPosPWM(1, 1540.00);
+leg[1].setRatioDegPWM(1, -0.09);
+leg[1].setNormalPosPWM(2, 540.00);
+leg[1].setRatioDegPWM(2, 0.10);
+leg[2].setAnchorRotDeg(180.00);
+leg[2].setNormalPosPWM(0, 1190.00);
+leg[2].setRatioDegPWM(0, 0.20);
+leg[2].setNormalPosPWM(1, 1800.00);
+leg[2].setRatioDegPWM(1, 0.11);
+leg[2].setNormalPosPWM(2, 2410.00);
+leg[2].setRatioDegPWM(2, -0.11);
+leg[3].setAnchorRotDeg(0.00);
+leg[3].setNormalPosPWM(0, 1360.00);
+leg[3].setRatioDegPWM(0, 0.13);
+leg[3].setNormalPosPWM(1, 1760.00);
+leg[3].setRatioDegPWM(1, -0.13);
+leg[3].setNormalPosPWM(2, 270.00);
+leg[3].setRatioDegPWM(2, 0.10);
+leg[4].setAnchorRotDeg(225.00);
+leg[4].setNormalPosPWM(0, 1380.00);
+leg[4].setRatioDegPWM(0, 0.12);
+leg[4].setNormalPosPWM(1, 1530.00);
+leg[4].setRatioDegPWM(1, 0.09);
+leg[4].setNormalPosPWM(2, 2820.00);
+leg[4].setRatioDegPWM(2, -0.09);
+leg[5].setAnchorRotDeg(315.00);
+leg[5].setNormalPosPWM(0, 1190.00);
+leg[5].setRatioDegPWM(0, 0.11);
+leg[5].setNormalPosPWM(1, 1450.00);
+leg[5].setRatioDegPWM(1, -0.10);
+leg[5].setNormalPosPWM(2, 660.00);
+leg[5].setRatioDegPWM(2, 0.13);
   // END ===============================
 
   // Setup SSC 32 config
@@ -132,7 +128,8 @@ void loop() {
     if (pressed == 'x') yaw += 1;
     if (pressed == '1') height -= 0.3;
     if (pressed == '2') height += 0.3;
-
+    if (pressed == 'p') Serial.println(connectorSSC.getPrintable());
+    
     // Set rx, ry, rz and compute
     posture.setRotationRad(pitch * M_PI / 180, roll * M_PI / 180, yaw * M_PI / 180);
     posture.setNormalPos(20, 20, 30, height);
@@ -150,10 +147,11 @@ void loop() {
 
     // Compute the SSC serial command and send to SSC serial connection
     connectorSSC.compute();
-    serialSSC.println(connectorSSC.getPrintable());
+    serialSSC.println(String(connectorSSC.getPrintable()));
+     // Debug
+  Serial.println(String("Pitch: ") + pitch + " Roll: " + roll + " Yaw: " + yaw + " Height: " + height);
   }
 
-  // Debug
-  Serial.println(String("Pitch: ") + pitch + " Roll: " + roll + " Yaw: " + yaw + " Height: " + height);
-  delay(50);
+ 
+ delayMicroseconds(500);
 }

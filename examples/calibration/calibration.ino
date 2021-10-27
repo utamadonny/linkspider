@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <SoftwareSerial.h>
 
-#include "../../../linkspider.h"
+#include "linkspider.h"
 
 int pressed = 0;
 int state_servoPWM[2][6][3];
