@@ -48,8 +48,7 @@ public:
     state_pwm[2][0] = 0;
     state_pwm[2][1] = 1000 / M_PI;
   }
-
-public:
+  
   void compute () {
     double diffX = state_target[0] - state_anchor[0];
     double diffY = state_target[1] - state_anchor[1];
@@ -68,63 +67,52 @@ public:
     computed_angle[2] = acos((pow(state_frame[2], 2) + pow(state_frame[1], 2) - pow(u, 2)) / (2 * state_frame[2] * state_frame[1]));
   }
 
-public:
   void setAnchorPos (double x0, double y0, double z0) {
     state_anchor[0] = x0;
     state_anchor[1] = y0;
     state_anchor[2] = z0;
   }
 
-public:
   void setAnchorRotRad (double rad) {
     state_anchor[3] = rad;
   }
 
-public:
   void setAnchorRotDeg (double deg) {
     state_anchor[3] = deg * M_PI / 180;
   }
 
-public:
   void setFrameLength (double coxa, double femur, double tibia) {
     state_frame[0] = coxa;
     state_frame[1] = femur;
     state_frame[2] = tibia;
   }
 
-public:
   void setNormalPosPWM (unsigned int index, double value) {
     state_pwm[index][0] = value;
   }
-
-public:
+  
   void setRatioRadPWM (unsigned int index, double radPerPWM) {
     state_pwm[index][1] = radPerPWM;
   }
 
-public:
   void setRatioDegPWM (unsigned int index, double degPerPWM) {
     state_pwm[index][1] = degPerPWM * M_PI / 180;
   }
 
-public:
   void setTipPos (double x, double y, double z) {
     state_target[0] = x;
     state_target[1] = y;
     state_target[2] = z;
   }
-
-public:
+  
   double getAngleRad (unsigned int index) {
     return computed_angle[index];
   }
 
-public:
   double getAngleDeg (unsigned int index) {
     return computed_angle[index] * 180 / M_PI;
   }
 
-public:
   double getAnglePWM (unsigned int index) {
     return state_pwm[index][0] + computed_angle[index] / state_pwm[index][1];
   }
@@ -153,7 +141,6 @@ public:
     state_rz = 0;
   }
 
-public:
   void compute () {
     computed_legs[0][0] = - state_frs / 2;
     computed_legs[0][1] = state_l / 2;
@@ -204,8 +191,7 @@ public:
       computed_legs[i][2] = z3;
     }
   }
-
-public:
+  
   void setNormalPos (double frs, double ms, double l, double h) {
     // frs = front and rear span, ms = middle span, l = length, h = height
     state_frs = frs;
@@ -214,7 +200,6 @@ public:
     state_h = h;
   }
 
-public:
   void setRotationRad (double rx, double ry, double rz) {
     // rx = pitch, ry = roll, rz = yaw
     state_rx = rx;
@@ -222,7 +207,6 @@ public:
     state_rz = rz;
   }
 
-public:
   void setRotationDeg (double rx, double ry, double rz) {
     rx = rx * M_PI / 180;
     ry = ry * M_PI / 180;
@@ -230,7 +214,6 @@ public:
     setRotationRad(rx, ry, rz);
   }
 
-public:
   double getCoordinate (unsigned int legIndex, unsigned int vectorIndex) {
     // legIndex -> [L1, R1, L2, R2, L3, R3], vectorIndex -> [x, y, z]
     return computed_legs[legIndex][vectorIndex];
@@ -257,23 +240,19 @@ public:
     state_interval = 200;
   }
 
-public:
   void setInterval (unsigned int time) {
     state_interval = time;
   }
 
-public:
   void setServoPin (unsigned int legIndex, unsigned int servoIndex, unsigned int pin) {
     state_pins[legIndex][servoIndex] = pin;
   }
 
-public:
   void setServoValue (unsigned int legIndex, unsigned int servoIndex, double value) {
     double roundedValue = round(abs(value));
     state_values[legIndex][servoIndex] = (int) roundedValue;
   }
 
-public:
   void compute () {
     sprintf(
       computed_printable,
@@ -300,7 +279,6 @@ public:
     );
   }
 
-public:
   char * getPrintable () {
     return computed_printable;
   }
