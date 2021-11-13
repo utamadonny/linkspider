@@ -36,49 +36,91 @@ void setup() {
 
   // Config from calibration example by pressing 'c' in serial monitor
   // BEGIN =============================
- 
-leg[0].setAnchorRotDeg(135.00);
+  leg[0].setAnchorRotDeg(135.00);
 leg[0].setNormalPosPWM(0, 1480.00);
 leg[0].setRatioDegPWM(0, 0.08);
-leg[0].setNormalPosPWM(1, 1590.00);
-leg[0].setRatioDegPWM(1, 0.09);
-leg[0].setNormalPosPWM(2, 2450.00);
-leg[0].setRatioDegPWM(2, -0.09);
+leg[0].setNormalPosPWM(1, 1670.00);
+leg[0].setRatioDegPWM(1, 0.12);
+leg[0].setNormalPosPWM(2, 2420.00);
+leg[0].setRatioDegPWM(2, -0.10);
 leg[1].setAnchorRotDeg(45.00);
 leg[1].setNormalPosPWM(0, 1570.00);
 leg[1].setRatioDegPWM(0, 0.09);
-leg[1].setNormalPosPWM(1, 1540.00);
+leg[1].setNormalPosPWM(1, 1510.00);
 leg[1].setRatioDegPWM(1, -0.09);
-leg[1].setNormalPosPWM(2, 540.00);
-leg[1].setRatioDegPWM(2, 0.10);
+leg[1].setNormalPosPWM(2, 360.00);
+leg[1].setRatioDegPWM(2, 0.08);
 leg[2].setAnchorRotDeg(180.00);
-leg[2].setNormalPosPWM(0, 1190.00);
-leg[2].setRatioDegPWM(0, 0.20);
+leg[2].setNormalPosPWM(0, 1240.00);
+leg[2].setRatioDegPWM(0, 0.15);
 leg[2].setNormalPosPWM(1, 1800.00);
-leg[2].setRatioDegPWM(1, 0.11);
-leg[2].setNormalPosPWM(2, 2410.00);
-leg[2].setRatioDegPWM(2, -0.11);
+leg[2].setRatioDegPWM(1, 0.08);
+leg[2].setNormalPosPWM(2, 2610.00);
+leg[2].setRatioDegPWM(2, -0.09);
 leg[3].setAnchorRotDeg(0.00);
-leg[3].setNormalPosPWM(0, 1360.00);
-leg[3].setRatioDegPWM(0, 0.13);
-leg[3].setNormalPosPWM(1, 1760.00);
-leg[3].setRatioDegPWM(1, -0.13);
+leg[3].setNormalPosPWM(0, 1310.00);
+leg[3].setRatioDegPWM(0, 0.14);
+leg[3].setNormalPosPWM(1, 1780.00);
+leg[3].setRatioDegPWM(1, -0.09);
 leg[3].setNormalPosPWM(2, 270.00);
-leg[3].setRatioDegPWM(2, 0.10);
+leg[3].setRatioDegPWM(2, 0.11);
 leg[4].setAnchorRotDeg(225.00);
 leg[4].setNormalPosPWM(0, 1380.00);
 leg[4].setRatioDegPWM(0, 0.12);
 leg[4].setNormalPosPWM(1, 1530.00);
 leg[4].setRatioDegPWM(1, 0.09);
-leg[4].setNormalPosPWM(2, 2820.00);
+leg[4].setNormalPosPWM(2, 2780.00);
 leg[4].setRatioDegPWM(2, -0.09);
 leg[5].setAnchorRotDeg(315.00);
 leg[5].setNormalPosPWM(0, 1190.00);
-leg[5].setRatioDegPWM(0, 0.11);
+leg[5].setRatioDegPWM(0, 0.15);
 leg[5].setNormalPosPWM(1, 1450.00);
 leg[5].setRatioDegPWM(1, -0.10);
-leg[5].setNormalPosPWM(2, 660.00);
-leg[5].setRatioDegPWM(2, 0.13);
+leg[5].setNormalPosPWM(2, 500.00);
+leg[5].setRatioDegPWM(2, 0.10);
+
+//leg[0].setAnchorRotDeg(135.00);
+//leg[0].setNormalPosPWM(0, 1480.00);
+//leg[0].setRatioDegPWM(0, 0.08);
+//leg[0].setNormalPosPWM(1, 1560.00);
+//leg[0].setRatioDegPWM(1, 0.09);
+//leg[0].setNormalPosPWM(2, 2410.00);
+//leg[0].setRatioDegPWM(2, -0.10);
+//leg[1].setAnchorRotDeg(45.00);
+//leg[1].setNormalPosPWM(0, 1570.00);
+//leg[1].setRatioDegPWM(0, 0.09);
+//leg[1].setNormalPosPWM(1, 1580.00);
+//leg[1].setRatioDegPWM(1, -0.08);
+//leg[1].setNormalPosPWM(2, 340.00);
+//leg[1].setRatioDegPWM(2, 0.08);
+//leg[2].setAnchorRotDeg(180.00);
+//leg[2].setNormalPosPWM(0, 1240.00);
+//leg[2].setRatioDegPWM(0, 0.15);
+//leg[2].setNormalPosPWM(1, 1800.00);
+//leg[2].setRatioDegPWM(1, 0.08);
+//leg[2].setNormalPosPWM(2, 2610.00);
+//leg[2].setRatioDegPWM(2, -0.09);
+//leg[3].setAnchorRotDeg(0.00);
+//leg[3].setNormalPosPWM(0, 1310.00);
+//leg[3].setRatioDegPWM(0, 0.14);
+//leg[3].setNormalPosPWM(1, 1780.00);
+//leg[3].setRatioDegPWM(1, -0.09);
+//leg[3].setNormalPosPWM(2, 270.00);
+//leg[3].setRatioDegPWM(2, 0.11);
+//leg[4].setAnchorRotDeg(225.00);
+//leg[4].setNormalPosPWM(0, 1380.00);
+//leg[4].setRatioDegPWM(0, 0.12);
+//leg[4].setNormalPosPWM(1, 1530.00);
+//leg[4].setRatioDegPWM(1, 0.09);
+//leg[4].setNormalPosPWM(2, 2740.00);
+//leg[4].setRatioDegPWM(2, -0.10);
+//leg[5].setAnchorRotDeg(315.00);
+//leg[5].setNormalPosPWM(0, 1190.00);
+//leg[5].setRatioDegPWM(0, 0.15);
+//leg[5].setNormalPosPWM(1, 1450.00);
+//leg[5].setRatioDegPWM(1, -0.10);
+//leg[5].setNormalPosPWM(2, 500.00);
+//leg[5].setRatioDegPWM(2, 0.10);
   // END ===============================
 
   // Setup SSC 32 config
@@ -126,6 +168,12 @@ void loop() {
     if (pressed == 's') roll += 1;
     if (pressed == 'z') yaw -= 1;
     if (pressed == 'x') yaw += 1;
+    if (pressed == 'e') pitch -= 5;
+    if (pressed == 'r') pitch += 5;
+    if (pressed == 'd') roll -= 5;
+    if (pressed == 'f') roll += 5;
+    if (pressed == 'c') yaw -= 5;
+    if (pressed == 'v') yaw += 5;
     if (pressed == '1') height -= 0.3;
     if (pressed == '2') height += 0.3;
     if (pressed == 'p') Serial.println(connectorSSC.getPrintable());
@@ -137,9 +185,11 @@ void loop() {
 
     // Set tip position of all legs, compute and set it to SSC servo PWM
     for (size_t i = 0; i < 6; i++) {
+//             Serial.println(String("x: ") + posture.getCoordinate(i, 0) + " y: " + posture.getCoordinate(i, 1) + 
+//                      " z: " + yaw + " Height: " + posture.getCoordinate(i, 2));
       leg[i].setTipPos(posture.getCoordinate(i, 0), posture.getCoordinate(i, 1), posture.getCoordinate(i, 2));
       leg[i].compute();
-
+     
       for (size_t j = 0; j < 3; j++) {
         connectorSSC.setServoValue(i, j, leg[i].getAnglePWM(j));
       }
