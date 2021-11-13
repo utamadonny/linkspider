@@ -83,44 +83,6 @@ state_servoPWM[COMBO_A][5][1] = 1450;
 state_servoPWM[COMBO_B][5][1] = 1000;
 state_servoPWM[COMBO_A][5][2] = 1400;
 state_servoPWM[COMBO_B][5][2] = 950;
-
-  
-//state_servoPWM[COMBO_A][0][0] = 1480;
-//state_servoPWM[COMBO_B][0][0] = 890;
-//state_servoPWM[COMBO_A][0][1] = 1560;
-//state_servoPWM[COMBO_B][0][1] = 2060;
-//state_servoPWM[COMBO_A][0][2] = 1530;
-//state_servoPWM[COMBO_B][0][2] = 1970;
-//state_servoPWM[COMBO_A][1][0] = 1570;
-//state_servoPWM[COMBO_B][1][0] = 2060;
-//state_servoPWM[COMBO_A][1][1] = 1580;
-//state_servoPWM[COMBO_B][1][1] = 1020;
-//state_servoPWM[COMBO_A][1][2] = 1440;
-//state_servoPWM[COMBO_B][1][2] = 890;
-//state_servoPWM[COMBO_A][2][0] = 1240;
-//state_servoPWM[COMBO_B][2][0] = 930;
-//state_servoPWM[COMBO_A][2][1] = 1800;
-//state_servoPWM[COMBO_B][2][1] = 2350;
-//state_servoPWM[COMBO_A][2][2] = 1610;
-//state_servoPWM[COMBO_B][2][2] = 2110;
-//state_servoPWM[COMBO_A][3][0] = 1310;
-//state_servoPWM[COMBO_B][3][0] = 1630;
-//state_servoPWM[COMBO_A][3][1] = 1780;
-//state_servoPWM[COMBO_B][3][1] = 1290;
-//state_servoPWM[COMBO_A][3][2] = 1090;
-//state_servoPWM[COMBO_B][3][2] = 680;
-//state_servoPWM[COMBO_A][4][0] = 1380;
-//state_servoPWM[COMBO_B][4][0] = 1000;
-//state_servoPWM[COMBO_A][4][1] = 1530;
-//state_servoPWM[COMBO_B][4][1] = 2010;
-//state_servoPWM[COMBO_A][4][2] = 1860;
-//state_servoPWM[COMBO_B][4][2] = 2300;
-//state_servoPWM[COMBO_A][5][0] = 1190;
-//state_servoPWM[COMBO_B][5][0] = 1490;
-//state_servoPWM[COMBO_A][5][1] = 1450;
-//state_servoPWM[COMBO_B][5][1] = 1000;
-//state_servoPWM[COMBO_A][5][2] = 1400;
-//state_servoPWM[COMBO_B][5][2] = 950;
   // END ==============================
 
   // Configure SSC 32
