@@ -1,6 +1,6 @@
 C ++ based inverse kinematics solver and algorithm for static positioning, walking sequence and adaptability of hexapod robot, with support for PWM based servo driver
 
-see : [Arduino Library] (https://github.com/utamadonny/linkspider/tree/arduino-lib-api) for Arduino Library
+see : [Arduino Library](https://github.com/utamadonny/linkspider/tree/arduino-lib-api) for Arduino Library
 
 ### Features
 * [x] Convert cartesian coordinates of each leg tips to 3DOF servo angle.
